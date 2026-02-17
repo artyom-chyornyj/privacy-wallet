@@ -1,0 +1,45 @@
+{
+  "name": "privacy-wallet",
+  "version": "1.0.0",
+  "description": "Private crypto wallet",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "lint": "eslint",
+    "lint:fix": "eslint --fix"
+  },
+  "dependencies": {
+    "@noble/ed25519": "^3.0.0",
+    "@noble/hashes": "^2.0.1",
+    "@railgun-community/circomlibjs": "^0.0.8",
+    "@railgun-community/curve25519-scalarmult-wasm": "^0.1.5",
+    "@scure/base": "^2.0.0",
+    "axios": "^1.13.2",
+    "brotli-wasm": "^3.0.1",
+    "buffer": "^6.0.3",
+    "crypto-browserify": "^3.12.1",
+    "ethereum-cryptography": "^3.2.0",
+    "ethers": "^6.16.0",
+    "path-browserify": "^1.0.1",
+    "process": "^0.11.10",
+    "react": "^19.2.3",
+    "react-dom": "^19.2.3",
+    "snarkjs": "^0.7.6",
+    "stream-browserify": "^3.0.0",
+    "util": "^0.12.5",
+    "zustand": "^5.0.10"
+  },
+  "devDependencies": {
+    "@railgun-reloaded/eslint-config": "^1.1.0",
+    "@railgun-reloaded/tsconfig": "^1.2.0",
+    "@types/react": "^19.2.8",
+    "@types/react-dom": "^19.2.3",
+    "@types/snarkjs": "^0.7.9",
+    "@vitejs/plugin-react": "^4.7.0",
+    "typescript": "^5.9.3",
+    "vite": "^5.4.21",
+    "vite-plugin-node-polyfills": "^0.25.0"
+  }
+}

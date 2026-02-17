@@ -1,0 +1,38 @@
+# Dependencies
+node_modules/
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Build output
+dist/
+
+# Logs
+*.log
+npm-debug.log*
+
+# Testing
+.vitest-*
+coverage/
+
+# TypeScript
+*.tsbuildinfo
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Circuit artifacts (fetched from IPFS as needed)
+public/circuits/
+public/prover/
+
+# Claude/AI config
+.claude/
+CLAUDE.md
+.mcp.json

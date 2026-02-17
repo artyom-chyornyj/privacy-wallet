@@ -1,0 +1,72 @@
+/* WalletManagementModal-specific styles (shared styles in shared-modal.css) */
+
+.modal-form {
+  padding: 24px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: var(--text-primary);
+  font-size: 0.9rem;
+}
+
+.form-textarea {
+  resize: vertical;
+  min-height: 100px;
+  font-family: 'Monaco', 'Menlo', 'Courier New', monospace;
+  font-size: 0.9rem;
+}
+
+.form-hint {
+  display: block;
+  margin-top: 6px;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+/* Override form-error margin for this context */
+.modal-form .form-error {
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.wallet-info-box {
+  margin-top: 20px;
+  padding: 16px;
+  background: rgba(245, 158, 11, 0.1);
+  border: 1px solid rgba(245, 158, 11, 0.3);
+  border-radius: var(--radius-md);
+  font-size: 0.9rem;
+  color: var(--warning);
+  line-height: 1.5;
+}
+
+.wallet-info-box strong {
+  display: block;
+  margin-bottom: 4px;
+  color: var(--warning);
+}
+
+/* Password strength indicator */
+.password-strength {
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.password-strength-weak {
+  color: var(--error);
+}
+
+.password-strength-medium {
+  color: var(--warning);
+}
+
+.password-strength-strong {
+  color: var(--success);
+}

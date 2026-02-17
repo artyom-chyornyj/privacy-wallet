@@ -1,0 +1,400 @@
+/* Modern Privacy Wallet Styles */
+@import './styles/utilities.css';
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --bg-primary: #0f0f0f;
+  --bg-secondary: #1a1a1a;
+  --bg-tertiary: #262626;
+  --bg-card: #1e1e1e;
+  --border-primary: #333333;
+  --border-secondary: #404040;
+  --text-primary: #ffffff;
+  --text-secondary: #a1a1aa;
+  --text-muted: #71717a;
+  --accent-primary: #8b5cf6;
+  --accent-secondary: #a78bfa;
+  --success: #10b981;
+  --warning: #f59e0b;
+  --error: #ef4444;
+  --info: #3b82f6;
+  --radius-sm: 6px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+}
+
+body {
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+.wallet-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.5rem;
+  min-height: 100vh;
+}
+
+/* Welcome Section */
+.welcome-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 80vh;
+  text-align: center;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.welcome-section h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin: 0 0 1rem 0;
+  background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.unlock-screen {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.unlock-screen form {
+  width: 100%;
+}
+
+.unlock-screen form button {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.unlock-screen .wallet-actions {
+  justify-content: center;
+}
+
+.wallet-actions {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  width: 100%;
+}
+
+.error-text {
+  color: var(--error);
+  font-size: 0.9rem;
+  margin: 0 0 1rem 0;
+  text-align: center;
+  font-weight: 500;
+}
+
+/* Button Styles */
+.primary-button {
+  background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+  border: none;
+  color: white;
+  font-weight: 600;
+  flex: 1;
+}
+
+.primary-button:hover:not(:disabled) {
+  background: linear-gradient(135deg, var(--accent-secondary), var(--accent-primary));
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+.secondary-button {
+  background: transparent;
+  border: 2px solid var(--border-secondary);
+  color: var(--text-primary);
+  font-weight: 500;
+  flex: 1;
+}
+
+.secondary-button:hover:not(:disabled) {
+  border-color: var(--accent-primary);
+  background: rgba(139, 92, 246, 0.1);
+}
+
+/* App Header */
+.app-header {
+  margin-bottom: 2rem;
+  padding: 1.5rem 0;
+  text-align: center;
+  border-bottom: 1px solid var(--border-primary);
+}
+
+.app-header h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0;
+  background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* App Footer */
+.app-footer {
+  display: flex;
+  justify-content: center;
+  padding: 2rem 0 1rem;
+  margin-top: 2rem;
+}
+
+.settings-footer-btn {
+  background: none;
+  border: 1px solid var(--border-primary);
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  cursor: pointer;
+  padding: 0.5rem 1.25rem;
+  border-radius: var(--radius-md);
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.settings-footer-btn:hover {
+  color: var(--text-primary);
+  border-color: var(--accent-primary);
+  background: rgba(139, 92, 246, 0.1);
+}
+
+/* Wallet and Network selector container */
+.wallet-selector-container {
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 16px;
+  background-color: var(--bg-secondary);
+  border-bottom: 1px solid var(--border-primary);
+  flex-wrap: wrap;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+}
+
+/* Tab Content */
+.tab-content {
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.wallet-info {
+  display: grid;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.wallet-info p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  padding: 0.75rem 1rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border-primary);
+  border-radius: var(--radius-md);
+  font-family: 'JetBrains Mono', monospace;
+  word-break: break-all;
+}
+
+.wallet-info strong {
+  color: var(--text-primary);
+  display: block;
+  margin-bottom: 0.25rem;
+  font-family: 'Inter', sans-serif;
+}
+
+
+/* Copy Button */
+.copy-button {
+  padding: 0.5rem;
+  border: 1px solid var(--border-secondary);
+  border-radius: var(--radius-sm);
+  background: var(--bg-secondary);
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 2.5rem;
+  height: 2.5rem;
+}
+
+.copy-button:hover:not(:disabled) {
+  background: var(--bg-primary);
+  border-color: var(--accent-primary);
+  color: var(--accent-primary);
+}
+
+.copy-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.copy-button.copied {
+  background: var(--success);
+  border-color: var(--success);
+  color: white;
+}
+
+/* Token & Transaction display */
+.token-symbol {
+  font-weight: 600;
+  font-size: 1.125rem;
+  color: var(--text-primary);
+}
+
+.balance-amount {
+  text-align: right;
+  font-weight: 600;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 1rem;
+  color: var(--text-primary);
+}
+
+.tx-type {
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.tx-amount {
+  text-align: right;
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+/* Buttons */
+button {
+  padding: 0.75rem 1.5rem;
+  border: 1px solid var(--border-secondary);
+  border-radius: var(--radius-md);
+  background: var(--bg-tertiary);
+  color: var(--text-primary);
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+button:hover:not(:disabled) {
+  background: var(--bg-secondary);
+  border-color: var(--accent-primary);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-sm);
+}
+
+button:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none !important;
+}
+
+button:focus {
+  outline: 2px solid var(--accent-primary);
+  outline-offset: 2px;
+}
+
+/* Error Message */
+.error-message {
+  padding: 1rem 1.5rem;
+  background-color: rgba(239, 68, 68, 0.1);
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  border-radius: var(--radius-md);
+  color: var(--error);
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+}
+
+.session-timeout-notice {
+  padding: 0.75rem 1rem;
+  background-color: rgba(245, 158, 11, 0.1);
+  border: 1px solid rgba(245, 158, 11, 0.3);
+  border-radius: var(--radius-md);
+  color: var(--warning);
+  margin-bottom: 1rem;
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .welcome-section h1 {
+    font-size: 2.25rem;
+  }
+
+  .wallet-actions {
+    flex-direction: column;
+  }
+
+  .balance-amount,
+  .tx-amount {
+    text-align: left;
+  }
+
+  .wallet-selector-container {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+    padding: 12px;
+  }
+
+  .app-header {
+    padding: 1rem 0;
+  }
+
+  .app-header h1 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .wallet-container {
+    padding: 0.75rem;
+  }
+
+  .welcome-section {
+    min-height: 70vh;
+  }
+
+  .welcome-section h1 {
+    font-size: 1.875rem;
+  }
+}

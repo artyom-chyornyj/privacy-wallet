@@ -1,0 +1,308 @@
+Privacy Wallet License
+
+This open source software is made available by independent researchers and
+developers. It is experimental research software provided for educational and
+research purposes.
+
+This software is licensed under the GNU Affero General Public License v3.0
+(AGPL-3.0) with the following additional terms:
+
+================================================================================
+ACCEPTANCE OF TERMS
+================================================================================
+
+BY CLICKING "I AGREE", "CONTINUE", OR BY OTHERWISE ACCESSING, DOWNLOADING,
+INSTALLING, OR USING THE SOFTWARE, PLATFORM, WEBSITE, APPLICATION, SOURCE CODE,
+DOCUMENTATION, AND ALL ASSOCIATED MATERIALS (COLLECTIVELY, THE "SOFTWARE"), YOU
+ACKNOWLEDGE THAT YOU HAVE READ, UNDERSTOOD, AND AGREE TO BE BOUND BY ALL OF THE
+TERMS AND CONDITIONS SET FORTH IN THIS LICENSE.
+
+THE SOFTWARE IS PROVIDED ON AN "AS IS" AND "WITH ALL FAULTS" BASIS WITHOUT
+WARRANTY OF ANY KIND, WHETHER EXPRESS, IMPLIED, STATUTORY, OR OTHERWISE. YOU
+EXPRESSLY ACKNOWLEDGE AND AGREE THAT:
+
+(a) YOU ASSUME ALL RISKS ASSOCIATED WITH THE USE OF THE SOFTWARE;
+
+(b) THE INDEPENDENT RESEARCHERS AND DEVELOPERS WHO MADE THIS SOFTWARE AVAILABLE
+    (COLLECTIVELY, "PROVIDERS") DISCLAIM ALL WARRANTIES, INCLUDING BUT NOT
+    LIMITED TO ANY IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A
+    PARTICULAR PURPOSE, TITLE, NON-INFRINGEMENT, ACCURACY, COMPLETENESS,
+    SECURITY, RELIABILITY, OR AVAILABILITY;
+
+(c) THE PROVIDERS DO NOT WARRANT THAT THE SOFTWARE WILL BE ERROR-FREE,
+    UNINTERRUPTED, SECURE, OR FREE FROM VIRUSES OR OTHER HARMFUL COMPONENTS;
+
+(d) THE PROVIDERS MAKE NO WARRANTIES REGARDING THE RESULTS THAT MAY BE OBTAINED
+    FROM USE OF THE SOFTWARE OR THE ACCURACY OR RELIABILITY OF ANY INFORMATION
+    OBTAINED THROUGH THE SOFTWARE; AND
+
+(e) ANY MATERIAL OR DATA DOWNLOADED OR OTHERWISE OBTAINED THROUGH USE OF THE
+    SOFTWARE IS ACCESSED AT YOUR OWN DISCRETION AND RISK, AND YOU WILL BE
+    SOLELY RESPONSIBLE FOR ANY DAMAGE TO YOUR PROPERTY OR LOSS OF DATA THAT
+    RESULTS FROM SUCH DOWNLOAD.
+
+THIS DISCLAIMER APPLIES TO THE FULLEST EXTENT PERMITTED BY APPLICABLE LAW.
+
+IF YOU DO NOT AGREE TO THESE TERMS, DO NOT ACCESS, DOWNLOAD, INSTALL, OR USE
+THE SOFTWARE. YOU MUST IMMEDIATELY CEASE ALL USE AND DELETE ALL COPIES OF THE
+SOFTWARE IN YOUR POSSESSION.
+
+================================================================================
+ADDITIONAL TERMS PURSUANT TO SECTION 7 OF THE AGPL-3.0
+================================================================================
+
+In addition to the terms of the AGPL-3.0, the following additional restrictions
+apply to this software and all derivative works:
+
+1. SANCTIONS COMPLIANCE REQUIREMENT
+
+   Any derivative work, modification, or redistribution of this software MUST
+   retain and not disable, remove, circumvent, or weaken the Private Proof of
+   Innocence (PPOI) integration or any other sanctions compliance mechanisms
+   present in this software.
+
+   All PPOI verification MUST use the official PPOI aggregator node provided
+   at https://ppoi.fdi.network/ (or any successor URL designated by the PPOI
+   network operators). You may NOT substitute, replace, or redirect PPOI
+   verification to any other endpoint, self-hosted node, or mock service.
+
+   Specifically, you may NOT:
+   - Remove or disable PPOI verification
+   - Modify the software to bypass sanctions screening
+   - Create derivative works that allow sanctioned funds to receive privacy
+   - Weaken, circumvent, or defeat any compliance mechanisms
+   - Replace or redirect the PPOI aggregator endpoint away from the official
+     PPOI network at https://ppoi.fdi.network/
+
+   Any derivative work that removes or weakens PPOI or sanctions compliance
+   is NOT authorized under this license and constitutes a breach of this
+   license.
+
+2. NON-COMMERCIAL DISTRIBUTION
+
+   The software itself may not be sold or commercially distributed.
+
+   You MAY:
+   - Use the software for any personal purpose, including profitable activities
+   - Study and reference the source code
+   - Create derivative works (subject to term 1 above)
+
+   You MAY NOT:
+   - Sell copies of this software or derivative works
+   - Charge fees to access or download this software
+   - Include this software in a commercial product offered for sale
+   - Offer hosting or access to this software as a paid service
+
+3. NO ENDORSEMENT
+
+   Neither the name of the project nor the names of any individual researchers
+   or developers associated with this software may be used to endorse or promote
+   products derived from this software without specific prior written permission.
+
+4. POLITICALLY EXPOSED PERSON (PEP) DECLARATION
+
+   By accessing or using the Software, you hereby voluntarily declare, represent,
+   warrant, and covenant that:
+
+   (a) PEP Status: You are NOT, and have not been within the past twelve (12)
+       months, a Politically Exposed Person ("PEP") as defined by the Financial
+       Action Task Force (FATF), including but not limited to:
+
+       (i) Any individual who is or has been entrusted with a prominent public
+           function in any country, including heads of state or government,
+           senior politicians, senior government officials, judicial or military
+           officials, senior executives of state-owned corporations, or important
+           political party officials;
+
+       (ii) Any individual who holds or has held a prominent function within an
+            international organization, including members of senior management or
+            individuals who have been entrusted with equivalent functions;
+
+       (iii) Any domestic PEP as defined under applicable local law or
+             regulation;
+
+   (b) Family Members and Close Associates: You are NOT an immediate family
+       member (including spouse, domestic partner, parent, sibling, child, or
+       spouse's parent or sibling) or known close associate (including any
+       individual known to have joint beneficial ownership of legal entities or
+       business relationships, or any other close business relations) of any PEP
+       as defined above;
+
+   (c) Ongoing Obligation: You agree to immediately cease using the Software
+       and notify the Providers if you become a PEP or an immediate family
+       member or known close associate of a PEP at any time;
+
+   (d) Accuracy of Representation: You acknowledge that this representation is
+       material and that the Providers are relying upon the accuracy of this
+       representation in permitting you to access and use the Software.
+
+   ANY BREACH OF THIS REPRESENTATION AND WARRANTY SHALL CONSTITUTE A MATERIAL
+   BREACH OF THIS LICENSE AND SHALL RESULT IN IMMEDIATE TERMINATION OF YOUR
+   RIGHT TO ACCESS AND USE THE SOFTWARE.
+
+5. RESTRICTED JURISDICTIONS
+
+   This software may NOT be accessed, downloaded, installed, or used by any
+   person or entity located in, organized under the laws of, or ordinarily
+   resident in the following jurisdictions:
+
+   - Cuba
+   - Iran
+   - North Korea (Democratic People's Republic of Korea)
+   - Syria
+   - Venezuela
+   - The Crimea, Donetsk, and Luhansk regions of Ukraine
+
+   Or any other jurisdiction subject to comprehensive sanctions imposed by the
+   United States (OFAC), the European Union, or the United Nations Security
+   Council.
+
+   By accessing or using this software, you represent and warrant that you are
+   not located in, organized under the laws of, or ordinarily resident in any
+   restricted jurisdiction listed above.
+
+6. USER CONDUCT RESTRICTIONS
+
+   By using this software, you agree that you will NOT use it for any purpose
+   that:
+   - Infringes upon or breaches the rights of any other person or entity,
+     including intellectual property rights, privacy rights, or contractual
+     rights
+   - Breaches any criminal law in any jurisdiction that applies to you, the
+     recipient, or the transaction
+   - Facilitates, aids, or abets any criminal activity, including but not
+     limited to fraud, theft, extortion, or trafficking
+   - Causes harm to others through deception, coercion, or exploitation
+
+   You accept sole responsibility for ensuring that your use of this software
+   complies with all applicable laws and does not infringe on the rights of
+   others.
+
+7. TESTNET ONLY
+
+   This software is experimental research software provided for testnet use
+   only. Any mainnet deployment is at the user's sole risk and responsibility.
+   The Providers expressly disclaim any responsibility for mainnet usage.
+
+8. NON-CUSTODIAL SOFTWARE
+
+   This is non-custodial, open-source research software. No Provider has access
+   to, custody of, or control over your private keys, seed phrases, or funds.
+   No Provider operates any servers that hold or transmit your assets, has the
+   ability to recover lost keys or reverse transactions, or intermediates,
+   facilitates, or processes any transactions on your behalf.
+
+   You alone are responsible for securing your private keys and seed phrases.
+   If you lose access to them, your funds are permanently unrecoverable.
+
+9. PPOI SPENDING REQUIREMENT
+
+   All funds must be verified through the Private Proof of Innocence (PPOI)
+   system provided by the official PPOI network at https://ppoi.fdi.network/
+   before they can be spent. You may not use this software to interact with
+   balances unless they have a valid PPOI status verified through the official
+   PPOI aggregator.
+
+10. NETWORK CONNECTIONS DISCLOSURE
+
+    This software makes direct network connections to external services including
+    RPC nodes, Subsquid indexers, PPOI aggregator nodes, IPFS gateways (for
+    downloading zero-knowledge proof artifacts), and Blockscout APIs (for public
+    transaction history). Your IP address may be visible to these services. No
+    Provider is responsible for any privacy breaches resulting from these network
+    connections.
+
+11. INDEMNIFICATION
+
+    You agree to indemnify, defend, and hold harmless all Providers and their
+    affiliates from and against any and all claims, actions, proceedings,
+    damages, losses, liabilities, costs, and expenses (including reasonable
+    attorneys' fees) arising out of or related to your use or misuse of this
+    software, your breach of these terms, your breach of any applicable law or
+    third-party rights, or any transaction you conduct using this software.
+
+    This indemnification obligation survives termination of this agreement and
+    your use of the software.
+
+12. LIMITATION OF LIABILITY
+
+    IN NO EVENT SHALL ANY PROVIDER BE LIABLE FOR ANY DIRECT, INDIRECT,
+    INCIDENTAL, SPECIAL, EXEMPLARY, CONSEQUENTIAL, OR PUNITIVE DAMAGES
+    (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+    LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND
+    ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+    (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
+    THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+    THE PROVIDERS' TOTAL AGGREGATE LIABILITY TO YOU FOR ALL CLAIMS ARISING OUT
+    OF OR RELATING TO THIS LICENSE OR THE SOFTWARE SHALL NOT EXCEED ZERO DOLLARS
+    ($0.00 USD).
+
+13. DISPUTE RESOLUTION & GOVERNING LAW
+
+    (a) Governing Law: This License and any dispute arising out of or relating
+        to the Software shall be governed by and construed in accordance with the
+        laws of the State of Delaware, United States of America, without regard
+        to its conflicts of law principles. The United Nations Convention on
+        Contracts for the International Sale of Goods shall not apply.
+
+    (b) Exclusive Jurisdiction and Venue: Subject to Section (c) below, any
+        legal action, suit, or proceeding arising out of or relating to this
+        License or the Software shall be brought exclusively in the state or
+        federal courts located in the State of Delaware, and each party
+        irrevocably submits to the exclusive jurisdiction and venue of such
+        courts. Each party hereby waives any objection to such venue and any
+        claim that such forum is inconvenient.
+
+    (c) Arbitration: Notwithstanding Section (b), either party may elect to
+        resolve any dispute, controversy, or claim arising out of or relating to
+        this License or the Software through binding arbitration. If arbitration
+        is elected, the arbitration shall be administered by the American
+        Arbitration Association (AAA) in accordance with its Commercial
+        Arbitration Rules then in effect. The arbitration shall be conducted by a
+        single arbitrator and shall take place in Wilmington, Delaware. The
+        arbitrator's decision shall be final and binding, and judgment on the
+        award may be entered in any court having jurisdiction thereof.
+
+    (d) Waiver of Class Actions: TO THE FULLEST EXTENT PERMITTED BY APPLICABLE
+        LAW, EACH PARTY WAIVES ANY RIGHT TO PURSUE DISPUTES ON A CLASS-WIDE,
+        REPRESENTATIVE, OR CONSOLIDATED BASIS AND AGREES THAT ANY DISPUTE
+        RESOLUTION PROCEEDING SHALL BE CONDUCTED ONLY ON AN INDIVIDUAL BASIS.
+
+    (e) Statute of Limitations: Any claim or cause of action arising out of or
+        relating to this License or the Software must be filed within one (1)
+        year after such claim or cause of action arose, or such claim or cause of
+        action shall be forever barred, regardless of any statute or law to the
+        contrary.
+
+14. RESEARCH SOFTWARE DISCLAIMER
+
+    This open source software is made available by independent researchers and
+    developers for educational and research purposes. It is experimental
+    research software. No Provider operates a service, company, or entity in
+    connection with this software. No contractual service relationship exists
+    between you and any Provider.
+
+================================================================================
+STANDARD AGPL-3.0 TERMS
+================================================================================
+
+This program is free software: you can redistribute it and/or modify it under
+the terms of the GNU Affero General Public License as published by the Free
+Software Foundation, either version 3 of the License, or (at your option) any
+later version.
+
+This program is distributed in the hope that it will be useful, but WITHOUT
+ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE. See the GNU Affero General Public License for more
+details.
+
+You should have received a copy of the GNU Affero General Public License along
+with this program. If not, see <https://www.gnu.org/licenses/>.
+
+================================================================================
+FULL AGPL-3.0 TEXT
+================================================================================
+
+The full text of the GNU Affero General Public License v3.0 is available at:
+https://www.gnu.org/licenses/agpl-3.0.txt

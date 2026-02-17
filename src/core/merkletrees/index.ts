@@ -1,0 +1,6 @@
+export { UTXOMerkletree } from './UTXOMerkletree'
+export { RailgunTxidMerkletree } from './RailgunTxidMerkletree'
+export type { RailgunTransactionWithHash } from './RailgunTxidMerkletree'
+export { InMemoryDatabase, createPersistentMerkletreeDatabase } from './database'
+export type { Database } from './database'
+export { TREE_DEPTH, TREE_MAX_ITEMS } from './types'

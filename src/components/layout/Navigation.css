@@ -1,0 +1,51 @@
+/* Navigation Styles */
+.navigation {
+  display: flex;
+  background: var(--bg-card);
+  border: 1px solid var(--border-primary);
+  border-top: none;
+  border-radius: 0 0 var(--radius-lg) var(--radius-lg);
+  padding: 0.25rem;
+  margin-bottom: 2rem;
+  overflow: hidden;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.nav-tab {
+  flex: 1;
+  padding: 0.75rem 1.5rem;
+  background: transparent;
+  border: none;
+  color: var(--text-secondary);
+  font-weight: 500;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border-radius: var(--radius-sm);
+  position: relative;
+}
+
+.nav-tab:hover {
+  color: var(--text-primary);
+  background: rgba(139, 92, 246, 0.1);
+}
+
+.nav-tab.active {
+  background: var(--accent-primary);
+  color: white;
+  box-shadow: 0 2px 4px rgba(139, 92, 246, 0.3);
+}
+
+.nav-tab.active:hover {
+  background: var(--accent-secondary);
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .nav-tab {
+    padding: 0.625rem 1rem;
+    font-size: 0.85rem;
+  }
+}

@@ -1,0 +1,181 @@
+/* WalletListModal-specific styles (shared styles in shared-modal.css) */
+
+.wallet-list-modal {
+  max-width: 600px;
+}
+
+/* Switch wallet form */
+.switch-wallet-form {
+  padding: 0;
+}
+
+.switch-wallet-form h3 {
+  margin: 0 0 8px 0;
+  font-size: 1.2rem;
+  color: var(--text-primary);
+}
+
+.switch-hint {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  margin-bottom: 16px;
+}
+
+/* Wallet list */
+.wallet-list {
+  max-height: 400px;
+  overflow-y: auto;
+  margin-bottom: 24px;
+}
+
+.wallet-item {
+  background: var(--bg-tertiary);
+  border: 2px solid var(--border-primary);
+  border-radius: var(--radius-lg);
+  padding: 16px;
+  margin-bottom: 12px;
+  transition: all 0.2s;
+}
+
+.wallet-item:hover {
+  border-color: var(--border-secondary);
+  background: var(--bg-card);
+}
+
+.wallet-item.active {
+  border-color: var(--accent-primary);
+  background: rgba(139, 92, 246, 0.05);
+}
+
+.wallet-item-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+  width: 100%;
+}
+
+.wallet-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.wallet-nickname {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.wallet-addresses {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.address-line {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.85rem;
+}
+
+.address-label {
+  color: var(--text-muted);
+  font-weight: 600;
+  min-width: 50px;
+}
+
+.address-value {
+  color: var(--text-secondary);
+  font-family: 'Monaco', 'Menlo', 'Courier New', monospace;
+  word-break: break-all;
+}
+
+.wallet-item .wallet-actions {
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+  flex-shrink: 0;
+  width: auto;
+  margin-bottom: 0;
+}
+
+.btn-switch {
+  background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: var(--radius-sm);
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+
+.btn-switch:hover {
+  background: linear-gradient(135deg, var(--accent-secondary), var(--accent-primary));
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(139, 92, 246, 0.3);
+}
+
+.btn-icon {
+  background: transparent;
+  border: 1px solid var(--border-secondary);
+  padding: 6px 10px;
+  border-radius: var(--radius-sm);
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  min-width: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-icon:hover {
+  background: var(--bg-tertiary);
+  border-color: var(--accent-primary);
+}
+
+.btn-icon.btn-danger:hover {
+  background: rgba(239, 68, 68, 0.1);
+  border-color: var(--error);
+}
+
+.wallet-list-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding-top: 16px;
+  border-top: 1px solid var(--border-primary);
+}
+
+/* Inline edit */
+.wallet-edit-form {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+}
+
+.wallet-edit-form .form-input {
+  flex: 1;
+  padding: 8px 12px;
+  font-size: 1rem;
+  min-width: 0;
+}
+
+.edit-actions {
+  display: flex;
+  gap: 4px;
+}
+
+.empty-state p {
+  margin: 0;
+  font-size: 1.1rem;
+}

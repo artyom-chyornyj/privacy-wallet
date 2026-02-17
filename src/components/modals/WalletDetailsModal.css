@@ -1,0 +1,100 @@
+/* WalletDetailsModal-specific styles (shared styles in shared-modal.css) */
+
+.wallet-details-modal {
+  max-width: 560px;
+}
+
+.wallet-details-body {
+  padding: 24px;
+}
+
+.wallet-details-name {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 20px;
+}
+
+/* Sections */
+.wallet-details-section {
+  margin-bottom: 20px;
+  padding: 16px;
+  background: var(--bg-tertiary);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-primary);
+}
+
+.wallet-details-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--text-primary);
+  margin-bottom: 6px;
+}
+
+.wallet-details-badge {
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.wallet-details-description {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  line-height: 1.4;
+  margin: 0 0 10px 0;
+}
+
+.wallet-details-value {
+  background: var(--bg-primary);
+  padding: 10px 12px;
+  border-radius: var(--radius-sm);
+  font-size: 0.8rem;
+  word-break: break-all;
+  line-height: 1.5;
+  color: var(--text-secondary);
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: all 0.2s;
+}
+
+.wallet-details-value:hover {
+  border-color: var(--accent-primary);
+  color: var(--text-primary);
+}
+
+.wallet-details-value.copied {
+  border-color: var(--success);
+}
+
+.wallet-details-value.mono {
+  font-family: 'Monaco', 'Menlo', 'Courier New', monospace;
+}
+
+/* Warning box */
+.wallet-details-warning {
+  margin-top: 12px;
+  padding: 10px 12px;
+  background: rgba(239, 68, 68, 0.08);
+  border: 1px solid rgba(239, 68, 68, 0.2);
+  border-radius: var(--radius-sm);
+  font-size: 0.82rem;
+  color: var(--error);
+  line-height: 1.4;
+}
+
+.wallet-details-warning strong {
+  display: inline;
+}
+
+.wallet-details-body .modal-actions {
+  margin-top: 8px;
+}

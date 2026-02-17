@@ -1,0 +1,261 @@
+/* Legal Agreement Modal */
+
+.legal-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+  padding: 16px;
+}
+
+.legal-modal-content {
+  background: #141414;
+  border: 1px solid #262626;
+  border-radius: 12px;
+  max-width: 640px;
+  width: 100%;
+  max-height: 92vh;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+/* Header */
+.legal-modal-header {
+  padding: 28px 32px 20px;
+  border-bottom: 1px solid #262626;
+  text-align: center;
+}
+
+.legal-modal-header h1 {
+  margin: 0 0 4px 0;
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #f5f5f5;
+  line-height: 1.4;
+}
+
+.legal-subtitle {
+  margin: 0;
+  color: #737373;
+  font-size: 0.8125rem;
+  font-weight: 400;
+}
+
+/* Scrollable body */
+.legal-modal-body {
+  flex: 1;
+  overflow-y: auto;
+  padding: 24px 32px;
+  position: relative;
+}
+
+/* Sections */
+.legal-section {
+  margin-bottom: 20px;
+}
+
+.legal-section:last-of-type {
+  margin-bottom: 32px;
+}
+
+.legal-section h2 {
+  margin: 0 0 6px 0;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: #e5e5e5;
+}
+
+.legal-section p {
+  margin: 0 0 6px 0;
+  color: #a3a3a3;
+  font-size: 0.8125rem;
+  line-height: 1.6;
+}
+
+.legal-section p:last-child {
+  margin-bottom: 0;
+}
+
+.legal-section strong {
+  color: #d4d4d4;
+  font-weight: 600;
+}
+
+/* Lists */
+.legal-section ul {
+  margin: 2px 0 6px 0;
+  padding: 0 0 0 18px;
+  list-style: disc;
+  color: #a3a3a3;
+}
+
+.legal-section ul:last-child {
+  margin-bottom: 0;
+}
+
+.legal-section li {
+  font-size: 0.8125rem;
+  line-height: 1.55;
+  margin-bottom: 1px;
+  padding-left: 2px;
+}
+
+.legal-section li::marker {
+  color: #525252;
+  font-size: 0.625rem;
+}
+
+/* Warning section */
+.warning-section {
+  background: rgba(234, 179, 8, 0.05);
+  border: 1px solid rgba(234, 179, 8, 0.15);
+  border-radius: 8px;
+  padding: 14px 16px;
+}
+
+.warning-section h2 {
+  color: #eab308;
+}
+
+.warning-section p {
+  color: #d4d4d4;
+}
+
+/* Network table */
+.network-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 6px 0;
+  font-size: 0.75rem;
+}
+
+.network-table th,
+.network-table td {
+  padding: 6px 10px;
+  text-align: left;
+  border: 1px solid #262626;
+  color: #a3a3a3;
+}
+
+.network-table th {
+  background: #1a1a1a;
+  color: #d4d4d4;
+  font-weight: 600;
+  font-size: 0.6875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+/* Scroll indicator */
+.scroll-indicator {
+  position: sticky;
+  bottom: 0;
+  background: linear-gradient(transparent, #141414 50%);
+  padding: 36px 0 6px;
+  text-align: center;
+  color: #8b5cf6;
+  font-weight: 500;
+  font-size: 0.75rem;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+/* Inline checkboxes (inside sections) */
+.legal-checkbox {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  cursor: pointer;
+  color: #a3a3a3;
+  font-size: 0.75rem;
+  line-height: 1.45;
+}
+
+.inline-checkbox {
+  margin-top: 12px;
+  padding: 10px 12px;
+  background: rgba(139, 92, 246, 0.05);
+  border: 1px solid rgba(139, 92, 246, 0.15);
+  border-radius: 6px;
+}
+
+.inline-checkbox + .inline-checkbox {
+  margin-top: 8px;
+}
+
+.legal-checkbox input[type="checkbox"] {
+  width: 14px;
+  height: 14px;
+  flex-shrink: 0;
+  margin: 1px 0 0 0;
+  accent-color: #8b5cf6;
+  cursor: pointer;
+}
+
+.legal-checkbox span {
+  flex: 1;
+}
+
+/* Footer */
+.legal-modal-footer {
+  padding: 16px 32px;
+  border-top: 1px solid #262626;
+}
+
+.btn-accept {
+  display: block;
+  width: 100%;
+  background: #8b5cf6;
+  color: #fff;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s;
+  margin: 0;
+}
+
+.btn-accept:hover:not(:disabled) {
+  background: #7c3aed;
+}
+
+.btn-accept:disabled {
+  background: #262626;
+  color: #525252;
+  cursor: not-allowed;
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+  .legal-modal-overlay {
+    padding: 0;
+  }
+
+  .legal-modal-content {
+    max-height: 100vh;
+    border-radius: 0;
+    border: none;
+  }
+
+  .legal-modal-header {
+    padding: 24px 20px 16px;
+  }
+
+  .legal-modal-body {
+    padding: 20px;
+  }
+
+  .legal-modal-footer {
+    padding: 14px 20px;
+  }
+}

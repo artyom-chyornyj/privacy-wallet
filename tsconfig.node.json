@@ -1,0 +1,10 @@
+{
+  "extends": ["@railgun-reloaded/tsconfig/tsconfig"],
+  "compilerOptions": {
+    "composite": true,
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "allowSyntheticDefaultImports": true
+  },
+  "include": ["vite.config.ts", "config/vite-plugin-fs-polyfill.ts"]
+}

@@ -1,0 +1,317 @@
+.gas-wallet-selector {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.gas-wallet-label {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-secondary);
+}
+
+.gas-wallet-dropdown {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 12px;
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border-primary);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.gas-wallet-dropdown:hover:not(.disabled) {
+  border-color: var(--accent-primary);
+  background: var(--bg-secondary);
+}
+
+.gas-wallet-dropdown.disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.gas-wallet-dropdown.open {
+  border-color: var(--accent-primary);
+}
+
+.gas-wallet-selected {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex: 1;
+  min-width: 0;
+}
+
+.gas-wallet-badge {
+  background: var(--accent-primary);
+  color: white;
+  padding: 2px 8px;
+  border-radius: var(--radius-sm);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  flex-shrink: 0;
+}
+
+.gas-wallet-nickname {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-primary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.gas-wallet-address {
+  font-family: 'JetBrains Mono', Monaco, 'Cascadia Code', monospace;
+  font-size: 12px;
+  color: var(--text-muted);
+  flex-shrink: 0;
+}
+
+.gas-wallet-eth-balance {
+  font-family: 'JetBrains Mono', Monaco, 'Cascadia Code', monospace;
+  font-size: 12px;
+  color: var(--accent-primary);
+  font-weight: 500;
+  flex-shrink: 0;
+  margin-left: auto;
+}
+
+.gas-dropdown-arrow {
+  font-size: 10px;
+  color: var(--text-muted);
+  margin-left: 8px;
+  transition: transform 0.2s ease;
+}
+
+.gas-wallet-dropdown.open .gas-dropdown-arrow {
+  transform: rotate(180deg);
+}
+
+/* Dropdown Menu */
+.gas-dropdown-menu {
+  position: absolute;
+  top: calc(100% + 4px);
+  left: 0;
+  right: 0;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-primary);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-lg);
+  z-index: 100;
+  overflow: hidden;
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.gas-dropdown-item {
+  padding: 12px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.gas-dropdown-item:hover:not(.locked) {
+  background: var(--bg-tertiary);
+}
+
+.gas-dropdown-item.active {
+  background: rgba(139, 92, 246, 0.1);
+  border-left: 3px solid var(--accent-primary);
+  padding-left: 9px;
+}
+
+.gas-dropdown-item.locked {
+  cursor: default;
+  opacity: 0.9;
+}
+
+.gas-wallet-option {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.gas-wallet-option-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.gas-wallet-option-nickname {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.gas-wallet-option-address {
+  font-family: 'JetBrains Mono', Monaco, 'Cascadia Code', monospace;
+  font-size: 11px;
+  color: var(--text-muted);
+  word-break: break-all;
+}
+
+/* Badge Variants */
+.gas-wallet-badge.active-badge {
+  background: var(--accent-primary);
+}
+
+.gas-wallet-badge.unlocked-badge {
+  background: var(--success);
+}
+
+.gas-wallet-badge.locked-badge {
+  background: var(--text-muted);
+}
+
+/* Section Divider */
+.gas-dropdown-divider {
+  height: 1px;
+  background: var(--border-primary);
+  margin: 4px 0;
+}
+
+.gas-dropdown-section-label {
+  padding: 8px 12px 4px;
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Wallet Actions */
+.gas-wallet-actions {
+  margin-top: 8px;
+}
+
+.gas-action-btn {
+  padding: 4px 10px;
+  border-radius: var(--radius-sm);
+  font-size: 11px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: 1px solid;
+}
+
+.gas-action-btn.unlock {
+  background: transparent;
+  color: var(--accent-primary);
+  border-color: var(--accent-primary);
+}
+
+.gas-action-btn.unlock:hover {
+  background: rgba(139, 92, 246, 0.1);
+}
+
+.gas-action-btn.lock {
+  background: transparent;
+  color: var(--text-muted);
+  border-color: var(--border-secondary);
+}
+
+.gas-action-btn.lock:hover {
+  background: var(--bg-tertiary);
+  color: var(--text-secondary);
+}
+
+/* Unlock Form */
+.gas-unlock-form {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.gas-unlock-input {
+  padding: 8px 10px;
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border-primary);
+  border-radius: var(--radius-sm);
+  font-size: 13px;
+  color: var(--text-primary);
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.gas-unlock-input:focus {
+  border-color: var(--accent-primary);
+}
+
+.gas-unlock-error {
+  font-size: 11px;
+  color: var(--error);
+}
+
+.gas-unlock-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.gas-unlock-btn {
+  padding: 6px 12px;
+  border-radius: var(--radius-sm);
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: 1px solid;
+}
+
+.gas-unlock-btn.confirm {
+  background: var(--accent-primary);
+  color: white;
+  border-color: var(--accent-primary);
+}
+
+.gas-unlock-btn.confirm:hover:not(:disabled) {
+  background: var(--accent-secondary);
+}
+
+.gas-unlock-btn.confirm:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.gas-unlock-btn.cancel {
+  background: transparent;
+  color: var(--text-muted);
+  border-color: var(--border-secondary);
+}
+
+.gas-unlock-btn.cancel:hover:not(:disabled) {
+  background: var(--bg-tertiary);
+}
+
+/* Empty State */
+.gas-dropdown-empty {
+  padding: 16px 12px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.gas-dropdown-empty span {
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+.gas-dropdown-hint {
+  font-size: 11px !important;
+  color: var(--text-muted);
+  opacity: 0.8;
+}
+
+/* Hint Text */
+.gas-wallet-hint {
+  font-size: 11px;
+  color: var(--text-muted);
+  margin: -2px 0 0 0;
+  line-height: 1.35;
+}

@@ -1,0 +1,604 @@
+/* Transaction List Component-Specific Styles */
+.transaction-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  background: var(--bg-card);
+  border: 1px solid var(--border-primary);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.transaction-list.empty {
+  padding: 2rem;
+  text-align: center;
+  color: var(--text-secondary);
+}
+
+/* Header - uses shared utilities with custom buttons */
+.transaction-list-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid var(--border-primary);
+  background: var(--bg-secondary);
+  flex-wrap: wrap;
+}
+
+.transaction-list-header h3 {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+/* Check All PPOI Button */
+.check-all-poi-btn {
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border-secondary);
+  color: var(--text-secondary);
+  padding: 0.35rem 0.6rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.78rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  white-space: nowrap;
+}
+
+.check-all-poi-btn:hover:not(:disabled) {
+  background: #4a90e2;
+  border-color: #4a90e2;
+  color: white;
+}
+
+.check-all-poi-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  background: var(--bg-secondary);
+  color: var(--text-muted);
+}
+
+/* Loading and Empty States */
+.loading-state {
+  padding: 3rem 2rem;
+  text-align: center;
+  color: var(--text-secondary);
+}
+
+.loading-spinner {
+  width: 2rem;
+  height: 2rem;
+  border: 2px solid var(--border-secondary);
+  border-top: 2px solid var(--accent-primary);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin: 0 auto 1rem;
+}
+
+.empty-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.empty-state h4 {
+  margin: 0 0 0.5rem 0;
+  color: var(--text-primary);
+}
+
+.empty-state p {
+  margin: 0 0 1.5rem 0;
+  color: var(--text-secondary);
+}
+
+/* Transaction Table */
+.transaction-table {
+  width: 100%;
+  overflow-x: visible;
+  overflow-y: visible;
+}
+
+.table-header {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  padding: 0.75rem 1.5rem;
+  background: var(--bg-secondary);
+  border-bottom: 1px solid var(--border-primary);
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.table-header > div {
+  display: flex;
+  align-items: center;
+}
+
+.table-header > div:nth-child(3) { justify-content: center; }
+.table-header > div:nth-child(4) { justify-content: flex-end; }
+
+.table-body {
+  /* Container for transaction rows */
+  display: flex;
+  flex-direction: column;
+}
+
+/* Transaction Row */
+.tx-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  padding: 0.75rem 1.5rem;
+  border-bottom: 1px solid var(--border-primary);
+  cursor: pointer;
+  transition: background 0.2s ease;
+  align-items: center;
+}
+
+.tx-row:hover {
+  background: var(--bg-secondary);
+}
+
+.tx-row.expanded {
+  background: var(--bg-secondary);
+}
+
+.tx-row:last-child {
+  border-bottom: none;
+}
+
+.tx-type {
+  font-weight: 600;
+  color: var(--text-primary);
+  font-size: 0.9rem;
+  text-transform: capitalize;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.tx-date {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.tx-amount {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  text-align: center;
+  min-width: 0;
+  overflow: hidden;
+  align-items: center;
+  justify-self: center;
+}
+
+.amount-value {
+  font-weight: 600;
+  color: var(--text-primary);
+  font-size: 0.85rem;
+  font-family: 'JetBrains Mono', monospace;
+  word-break: break-word;
+  line-height: 1.3;
+}
+
+.amount-extra {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+/* Status badge overrides handled in shared utilities.css */
+
+/* Submit PPOI Button (in expanded details) */
+.submit-poi-btn {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border: none;
+  color: white;
+  padding: 0.4rem 0.75rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.submit-poi-btn:hover:not(:disabled) {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+}
+
+.submit-poi-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Received Transfer PPOI Notice */
+.ppoi-received-notice {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  background: rgba(234, 179, 8, 0.1);
+  border: 1px solid rgba(234, 179, 8, 0.3);
+  border-radius: var(--radius-sm);
+  padding: 0.5rem 0.75rem;
+  font-size: 0.8rem;
+  color: #d4a017;
+  max-width: 300px;
+}
+
+.ppoi-notice-icon {
+  flex-shrink: 0;
+}
+
+.ppoi-notice-text {
+  line-height: 1.4;
+}
+
+/* Expand Chevron */
+.tx-expand {
+  background: none;
+  border: none;
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: transform 0.2s ease, color 0.2s ease;
+  padding: 0.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tx-expand.expanded {
+  transform: rotate(90deg);
+}
+
+.tx-expand:hover {
+  color: var(--text-primary);
+}
+
+/* Transaction Details (Expanded) */
+.tx-details {
+  background: var(--bg-tertiary);
+  border-top: 1px solid var(--border-primary);
+  padding: 1.5rem;
+  animation: slideDown 0.3s ease-out;
+  overflow-x: auto;
+}
+
+.details-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+/* Token Rows */
+.token-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--border-primary);
+  font-size: 0.85rem;
+}
+
+.token-row:last-child {
+  border-bottom: none;
+}
+
+.token-symbol {
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.token-amount {
+  font-family: 'JetBrains Mono', monospace;
+  color: var(--text-primary);
+}
+
+/* PPOI Status Section */
+.ppoi-section .detail-row,
+.ppoi-section .ppoi-box-actions,
+.ppoi-section .ppoi-details-toggle,
+.ppoi-section .ppoi-commitments-list {
+  text-align: left;
+}
+
+.ppoi-box-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.75rem;
+  margin-top: 0.75rem;
+}
+
+.ppoi-summary-badge {
+  padding: 0.25rem 0.6rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.8rem;
+  font-weight: 600;
+  border: 1px solid;
+  display: inline-block;
+}
+
+.ppoi-summary-badge.ppoi-valid {
+  background: rgba(16, 185, 129, 0.15);
+  color: #10b981;
+  border-color: rgba(16, 185, 129, 0.3);
+}
+
+.ppoi-summary-badge.ppoi-missing {
+  background: rgba(245, 158, 11, 0.15);
+  color: #f59e0b;
+  border-color: rgba(245, 158, 11, 0.3);
+}
+
+.ppoi-summary-badge.ppoi-unknown {
+  background: rgba(245, 158, 11, 0.15);
+  color: #f59e0b;
+  border-color: rgba(245, 158, 11, 0.3);
+}
+
+.ppoi-summary-badge.ppoi-pending {
+  background: rgba(59, 130, 246, 0.15);
+  color: #3b82f6;
+  border-color: rgba(59, 130, 246, 0.3);
+}
+
+.ppoi-summary-badge.ppoi-invalid {
+  background: rgba(239, 68, 68, 0.15);
+  color: #ef4444;
+  border-color: rgba(239, 68, 68, 0.3);
+}
+
+.ppoi-commitments-value {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.ppoi-info-link {
+  font-size: 0.9rem;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  padding: 0.15rem;
+  border-radius: var(--radius-sm);
+  transition: background 0.2s ease;
+}
+
+.ppoi-info-link:hover {
+  background: var(--bg-tertiary);
+}
+
+/* PPOI Expandable Commitment Details */
+.ppoi-details-toggle {
+  background: none;
+  border: none;
+  border-top: 1px solid var(--border-primary);
+  color: var(--text-secondary);
+  font-size: 0.78rem;
+  cursor: pointer;
+  padding: 0.6rem 0 0.1rem;
+  margin: 0.5rem 0 0 0;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  transition: color 0.2s ease;
+  width: 100%;
+  text-align: left;
+}
+
+.ppoi-details-toggle:hover {
+  color: var(--text-primary);
+}
+
+.ppoi-toggle-chevron {
+  display: inline-block;
+  transition: transform 0.2s ease;
+  font-size: 0.85rem;
+}
+
+.ppoi-details-toggle.open .ppoi-toggle-chevron {
+  transform: rotate(90deg);
+}
+
+.ppoi-commitments-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  padding-top: 0.35rem;
+}
+
+.ppoi-commitment-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.78rem;
+  padding: 0.3rem 0;
+  flex-wrap: wrap;
+}
+
+.ppoi-commitment-index {
+  color: var(--text-secondary);
+  font-weight: 600;
+  min-width: 1.5rem;
+}
+
+.ppoi-commitment-hash {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.72rem;
+  background: var(--bg-secondary);
+  padding: 0.2rem 0.4rem;
+  border-radius: var(--radius-sm);
+  color: var(--text-primary);
+  border: 1px solid var(--border-secondary);
+}
+
+.ppoi-commitment-type {
+  padding: 0.15rem 0.4rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.ppoi-commitment-type.spent {
+  background: rgba(255, 152, 0, 0.15);
+  color: #ff9800;
+}
+
+.ppoi-commitment-type.output {
+  background: rgba(76, 175, 80, 0.15);
+  color: #4caf50;
+}
+
+.refresh-poi-btn {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-secondary);
+  color: var(--text-primary);
+  padding: 0.4rem 0.75rem;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 0.8rem;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  white-space: nowrap;
+}
+
+.refresh-poi-btn:hover:not(:disabled) {
+  background: var(--accent-primary);
+  border-color: var(--accent-primary);
+  color: white;
+}
+
+.refresh-poi-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .transaction-list-header {
+    flex-direction: column;
+    gap: 0.75rem;
+    align-items: stretch;
+    padding: 1rem;
+  }
+
+  .header-left {
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .header-actions {
+    justify-content: flex-start;
+    width: 100%;
+  }
+
+  .header-actions .btn,
+  .header-actions button {
+    flex: 1;
+    min-width: 0;
+    justify-content: center;
+  }
+
+  .table-header {
+    display: none; /* Hide header on mobile */
+  }
+
+  .tx-row {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .tx-type {
+    order: 1;
+  }
+
+  .tx-date {
+    order: 2;
+  }
+
+  .tx-amount {
+    order: 3;
+    text-align: left;
+    align-items: flex-start;
+    margin: 0.5rem 0;
+  }
+
+  .status-badge {
+    order: 4;
+    align-self: flex-start;
+    margin: 0.5rem 0;
+  }
+
+  /* Transaction Details Mobile */
+  .tx-details {
+    padding: 1rem;
+    overflow-x: hidden;
+  }
+
+  .details-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .detail-section {
+    padding: 0.75rem;
+  }
+
+  .detail-section h4 {
+    font-size: 0.85rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .ppoi-received-notice {
+    max-width: 100%;
+  }
+
+  .ppoi-commitment-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.25rem;
+  }
+
+  .ppoi-commitment-hash {
+    font-size: 0.65rem;
+    word-break: break-all;
+    white-space: normal;
+  }
+
+  .token-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.25rem;
+  }
+}
+

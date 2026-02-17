@@ -1,0 +1,316 @@
+/* ============================================
+   WALLET SELECTOR COMPONENT
+   ============================================ */
+.wallet-selector {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border-primary);
+  border-radius: var(--radius-md);
+  min-width: 0;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+.wallet-selector:hover {
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.wallet-label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.wallet-mode-badge {
+  background: var(--accent-primary);
+  color: white;
+  padding: 4px 10px;
+  border-radius: var(--radius-sm);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.wallet-nickname {
+  font-size: 14px;
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.wallet-nickname-placeholder {
+  font-size: 13px;
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+.wallet-address-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 0;
+}
+
+.wallet-dropdown {
+  position: relative;
+  min-width: 0;
+  color: var(--text-secondary);
+  font-family: 'JetBrains Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.wallet-address {
+  white-space: nowrap;
+}
+
+.dropdown-arrow {
+  color: var(--text-muted);
+  transition: transform 0.2s ease;
+  display: flex;
+  align-items: center;
+}
+
+.wallet-selector.open .dropdown-arrow {
+  transform: rotate(180deg);
+}
+
+/* ============================================
+   DROPDOWN MENU
+   ============================================ */
+.dropdown-menu {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: -16px;
+  min-width: 380px;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-primary);
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4), 0 2px 8px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+  overflow: hidden;
+  animation: dropdownFadeIn 0.15s ease-out;
+}
+
+@keyframes dropdownFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.dropdown-menu-header {
+  padding: 12px 16px 8px;
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+}
+
+.dropdown-item {
+  padding: 12px 16px;
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+  border-left: 3px solid transparent;
+}
+
+.dropdown-item:hover {
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.dropdown-item.active {
+  background: rgba(139, 92, 246, 0.08);
+  border-left-color: var(--accent-primary);
+}
+
+.wallet-option {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.wallet-type-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.wallet-type-label {
+  color: white;
+  padding: 3px 8px;
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+}
+
+.wallet-type-label.private {
+  background: var(--accent-primary);
+}
+
+.wallet-type-label.public {
+  background: #3b82f6;
+}
+
+.wallet-type-tech {
+  font-size: 11px;
+  color: var(--text-muted);
+  font-weight: 500;
+  font-family: 'JetBrains Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
+  opacity: 0.7;
+}
+
+.wallet-address-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.wallet-address-full {
+  font-family: 'JetBrains Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
+  font-size: 12px;
+  color: var(--text-secondary);
+  flex: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* ============================================
+   COPY BUTTON
+   ============================================ */
+.copy-button {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 6px;
+  padding: 6px;
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: all 0.15s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 30px;
+  height: 30px;
+}
+
+.copy-button:hover {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.15);
+  color: var(--text-primary);
+}
+
+.copy-button.copied {
+  background: rgba(16, 185, 129, 0.15);
+  border-color: rgba(16, 185, 129, 0.3);
+  color: var(--success);
+}
+
+.copy-button:active {
+  transform: scale(0.92);
+}
+
+/* ============================================
+   DIVIDER & MANAGE WALLETS
+   ============================================ */
+.dropdown-divider {
+  height: 1px;
+  background: var(--border-primary);
+  margin: 4px 16px;
+}
+
+.dropdown-item.manage-wallets {
+  padding: 12px 16px;
+  color: var(--text-secondary);
+  font-size: 13px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-left: 3px solid transparent;
+}
+
+.dropdown-item.manage-wallets:hover {
+  background: rgba(255, 255, 255, 0.03);
+  color: var(--text-primary);
+}
+
+.dropdown-item.manage-wallets svg {
+  opacity: 0.6;
+}
+
+.dropdown-item.manage-wallets:hover svg {
+  opacity: 1;
+}
+
+/* ============================================
+   MOBILE RESPONSIVE
+   ============================================ */
+@media (max-width: 768px) {
+  .wallet-selector {
+    max-width: none;
+    width: 100%;
+    flex-wrap: wrap;
+    padding: 10px 12px;
+    position: relative;
+  }
+
+  .wallet-label {
+    width: 100%;
+    margin-bottom: 4px;
+  }
+
+  .wallet-address-container {
+    width: 100%;
+    position: static;
+  }
+
+  .wallet-dropdown {
+    font-size: 12px;
+    position: static;
+  }
+
+  .dropdown-menu {
+    position: fixed;
+    top: auto;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    min-width: 100%;
+    max-height: 60vh;
+    border-radius: 16px 16px 0 0;
+    z-index: 1000;
+    animation: slideUp 0.2s ease-out;
+  }
+
+  @keyframes slideUp {
+    from {
+      transform: translateY(100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  .wallet-address-full {
+    font-size: 11px;
+  }
+
+  .dropdown-item {
+    padding: 14px 16px;
+  }
+}

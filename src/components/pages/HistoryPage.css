@@ -1,0 +1,13 @@
+/* History Page Component-Specific Styles */
+.history-content {
+  /* Transaction list will handle its own styling */
+  min-height: 200px;
+  overflow-x: auto;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .history-page {
+    padding: 0 1rem;
+  }
+}

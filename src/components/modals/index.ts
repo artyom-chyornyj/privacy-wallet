@@ -1,0 +1,7 @@
+export { AddTokenModal } from './AddTokenModal'
+export { LegalAgreementModal } from './LegalAgreementModal'
+export { SettingsModal } from './SettingsModal'
+export { WalletCreatedModal } from './WalletCreatedModal'
+export { WalletDetailsModal } from './WalletDetailsModal'
+export { WalletListModal } from './WalletListModal'
+export { WalletManagementModal } from './WalletManagementModal'
